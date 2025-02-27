@@ -1,4 +1,4 @@
-const About = () => {
+const Recruitment = () => {
   const aboutDetails = {
     title: 'Recruitment of Workers & Maids',
     descripton:
@@ -21,7 +21,7 @@ const About = () => {
   return (
     <div className="recruitment-homepage bg-primary">
       <div className="container flex flex-col items-center justify-center p-32">
-        <h1 className="mt-2 text-2xl font-bold text-secondary">
+        <h1 className="mt-2 text-3xl font-extrabold text-secondary">
           {aboutDetails.title}
         </h1>
         <p className="mt-10 text-center text-xl leading-9 text-white">
@@ -42,4 +42,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Recruitment;

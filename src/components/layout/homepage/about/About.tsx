@@ -20,7 +20,7 @@ const About = () => {
           priority
           className="object-contain"
         />
-        <h1 className="mt-2 text-2xl font-bold text-secondary">
+        <h1 className="mt-2 text-3xl font-extrabold text-secondary">
           {aboutDetails.title}
         </h1>
         <div className="mt-10 flex flex-col gap-8">
