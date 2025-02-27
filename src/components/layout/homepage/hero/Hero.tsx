@@ -15,8 +15,8 @@ const Hero = () => {
         src={homepageImage}
         alt="Background Image"
         priority
-        width={1440}
-        height={372}
+        width={2000}
+        height={845}
         className="object-cover"
       />
 

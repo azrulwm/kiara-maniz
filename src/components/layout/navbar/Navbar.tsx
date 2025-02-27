@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
-import mainLogo from '@public/main-logo.svg';
+import mainLogo from '@public/nav-logo.svg';
 import { ROUTES } from '@/config/route';
 
 const Navbar = () => {
