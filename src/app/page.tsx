@@ -1,7 +1,7 @@
-import About from '@/components/layout/homepage/about';
-import Consultancy from '@/components/layout/homepage/consultancy';
-import Hero from '@/components/layout/homepage/hero';
-import Recruitment from '@/components/layout/homepage/recruitment';
+import About from '@/components/Homepage/About';
+import Consultancy from '@/components/Homepage/Consultancy';
+import Hero from '@/components/Homepage/Hero';
+import Recruitment from '@/components/Homepage/Recruitment';
 
 export default function Home() {
   return (
