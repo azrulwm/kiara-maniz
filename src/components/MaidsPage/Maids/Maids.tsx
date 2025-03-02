@@ -29,7 +29,7 @@ const Maids = () => {
             </div>
             {/* Mobile Header */}
             <div className="hidden max-md:absolute max-md:inset-0 max-md:flex max-md:items-center max-md:justify-center">
-              <h1 className="text-center text-3xl font-extrabold text-white">
+              <h1 className="text-center text-3xl font-extrabold text-secondary">
                 {maidsDetails.header}
               </h1>
             </div>
