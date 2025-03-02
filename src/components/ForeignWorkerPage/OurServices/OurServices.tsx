@@ -23,8 +23,7 @@ const OurServices = () => {
       },
       {
         title: 'Home Leave Processing',
-        descripton:
-          'Process and prepare documents needed for housemaid’s holidays to their home country.',
+        descripton: `Process and prepare documents needed for housemaid's holidays to their home country.`,
       },
       {
         title: 'Flight Ticket Booking & Check Out Memo',
@@ -48,8 +47,7 @@ const OurServices = () => {
       },
       {
         title: 'Salary Remittance',
-        descripton:
-          'Remittance of salary to housemaids’ families in the source country.',
+        descripton: `Remittance of salary to housemaids' families in the source country.`,
       },
       {
         title: 'Airport Transfer & Escort Services',
@@ -58,22 +56,25 @@ const OurServices = () => {
       },
     ],
   };
+
   return (
     <div className="our-services-foreignworkerpage bg-gray-100">
-      <div className="container flex flex-col items-center justify-center px-32 py-16">
-        <h1 className="mb-10 text-center text-3xl font-extrabold text-secondary">
+      <div className="container flex flex-col items-center justify-center px-32 py-16 max-md:px-4 max-md:py-8">
+        <h1 className="mb-10 text-center text-3xl font-extrabold text-secondary max-md:mb-6 max-md:text-2xl">
           {serviceDetails.header}
         </h1>
-        <div className="grid w-full grid-cols-1 gap-x-20 gap-y-8 md:grid-cols-2">
+        <div className="grid w-full grid-cols-1 gap-x-20 gap-y-8 max-md:gap-x-4 max-md:gap-y-4 md:grid-cols-2">
           {serviceDetails.commitmentCard.map((item, index) => (
             <div
               key={index}
-              className="flex h-[150px] flex-col items-center rounded-3xl bg-secondary p-6"
+              className="flex h-[150px] flex-col items-center rounded-3xl bg-secondary p-6 max-md:h-auto max-md:p-4"
             >
-              <h3 className="mb-4 text-center text-xl font-bold text-white">
+              <h3 className="mb-4 text-center text-xl font-bold text-white max-md:mb-2 max-md:text-lg">
                 {item.title}
               </h3>
-              <p className="text-center text-white">{item.descripton}</p>
+              <p className="text-center text-white max-md:text-sm">
+                {item.descripton}
+              </p>
             </div>
           ))}
         </div>

@@ -24,39 +24,58 @@ const ForeignWorker = () => {
 
   return (
     <div className="foreign-worker-foreignworkerpage">
-      <div className="container flex flex-col items-center justify-center gap-6 px-32 py-16">
-        <div className="flex gap-8">
-          <div className="w-1/3">
-            <Image
-              src={foreignWorker}
-              alt="Foreign worker image"
-              width={250}
-              height={250}
-              priority
-              className="mb-4 w-full object-contain"
-            />
+      <div className="container flex flex-col items-center justify-center gap-6 px-32 py-16 max-md:px-0 max-md:py-0">
+        <div className="flex gap-8 max-md:block max-md:w-full">
+          {/* Image Section */}
+          <div className="w-1/3 max-md:relative max-md:h-[40vh] max-md:w-full">
+            <div className="max-md:absolute max-md:inset-0">
+              <Image
+                src={foreignWorker}
+                alt="Foreign worker image"
+                width={250}
+                height={250}
+                priority
+                className="mb-4 w-full object-contain max-md:h-full max-md:w-full max-md:object-cover max-md:brightness-50"
+              />
+            </div>
+            {/* Mobile Header */}
+            <div className="hidden max-md:absolute max-md:inset-0 max-md:flex max-md:items-center max-md:justify-center">
+              <h1 className="text-center text-3xl font-extrabold text-white">
+                {foreignWorkerDetails.header}
+              </h1>
+            </div>
           </div>
-          <div className="w-2/3">
-            <h1 className="mt-2 text-3xl font-extrabold text-secondary">
+
+          {/* Content Section */}
+          <div className="w-2/3 max-md:mt-8 max-md:w-full max-md:px-4">
+            {/* Desktop Header */}
+            <h1 className="mt-2 text-3xl font-extrabold text-secondary max-md:hidden">
               {foreignWorkerDetails.header}
             </h1>
-            <h1 className="mt-10 text-3xl font-extrabold text-secondary">
+            <h1 className="mt-10 text-3xl font-extrabold text-secondary max-md:mt-0">
               {foreignWorkerDetails.mainParagraph.title}
             </h1>
-            <p className="mt-4 text-xl leading-9">
+            <p className="mt-4 text-xl leading-9 max-md:text-base">
               {foreignWorkerDetails.mainParagraph.description}
             </p>
           </div>
         </div>
-        <div>
+
+        {/* Description Section */}
+        <div className="w-full max-md:px-4">
           {foreignWorkerDetails.descriptionParagraph.map((item, index) => {
             if (typeof item === 'object' && 'intro' in item) {
               return (
                 <div key={index} className="mb-10">
-                  <p className="text-xl leading-8">{item.intro}</p>
+                  <p className="text-xl leading-8 max-md:text-base">
+                    {item.intro}
+                  </p>
                   <ul className="mt-4 list-disc space-y-2 pl-8">
                     {item.list.map((bullet, bulletIndex) => (
-                      <li key={bulletIndex} className="text-xl leading-8">
+                      <li
+                        key={bulletIndex}
+                        className="text-xl leading-8 max-md:text-base"
+                      >
                         {bullet}
                       </li>
                     ))}
@@ -65,7 +84,10 @@ const ForeignWorker = () => {
               );
             }
             return (
-              <p key={index} className="mb-10 text-xl leading-8">
+              <p
+                key={index}
+                className="mb-10 text-xl leading-8 max-md:text-base"
+              >
                 {item}
               </p>
             );
