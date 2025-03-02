@@ -35,7 +35,7 @@ const OurCommitment = () => {
   };
 
   return (
-    <div className="our-commitment-aboutpage">
+    <div className="our-commitment-aboutpage bg-primary md:bg-white">
       <div className="container flex flex-col items-center justify-center gap-8 px-4 py-8 md:gap-20 md:px-32 md:py-16">
         <h1 className="mt-2 text-center text-2xl font-extrabold text-secondary md:text-3xl">
           {commitmentDetails.header}
