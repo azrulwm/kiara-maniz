@@ -33,30 +33,33 @@ const OurCommitment = () => {
       },
     ],
   };
+
   return (
     <div className="our-commitment-aboutpage">
-      <div className="container flex flex-col items-center justify-center gap-20 px-32 py-16">
-        <h1 className="mt-2 text-center text-3xl font-extrabold text-secondary">
+      <div className="container flex flex-col items-center justify-center gap-8 px-4 py-8 md:gap-20 md:px-32 md:py-16">
+        <h1 className="mt-2 text-center text-2xl font-extrabold text-secondary md:text-3xl">
           {commitmentDetails.header}
         </h1>
-        <div className="grid w-full grid-cols-1 gap-20 md:grid-cols-2">
+        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-20">
           {commitmentDetails.commitmentCard.map((item, index) => (
             <div
               key={index}
-              className="flex h-[300px] flex-col items-center rounded-2xl bg-secondary p-6"
+              className="flex h-auto flex-col items-center rounded-2xl bg-secondary p-4 md:h-[300px] md:p-6"
             >
-              <h3 className="mb-4 text-xl font-bold text-white">
+              <h3 className="mb-3 text-lg font-bold text-white md:mb-4 md:text-xl">
                 {item.title}
               </h3>
               <Image
                 src={item.logo}
-                alt="Description Logo"
+                alt={`${item.title} Logo`}
                 width={250}
                 height={250}
                 priority
-                className="mb-4 object-contain"
+                className="mb-3 h-auto w-[150px] object-contain md:mb-4 md:w-[250px]"
               />
-              <p className="text-center text-white">{item.descripton}</p>
+              <p className="text-center text-sm text-white md:text-base">
+                {item.descripton}
+              </p>
             </div>
           ))}
         </div>
