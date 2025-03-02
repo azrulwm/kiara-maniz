@@ -10,10 +10,6 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
-
-  experimental: {
-    typedRoutes: true,
-  },
 };
 
 export default nextConfig;
