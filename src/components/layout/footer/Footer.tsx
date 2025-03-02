@@ -4,12 +4,14 @@ import instagramIcon from '@public/instagram-icon.svg';
 import footerBgImage from '@public/footer-bg-image.webp';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ROUTES } from '@/config/route';
 
 const Footer = () => {
   const contactUs = {
     title: 'Have questions or need assistance?',
     description:
       'Our dedicated team is here to help. Reach out for personalized support and guidance.',
+    link: ROUTES.CONTACT,
   };
 
   const socialLogos = [
@@ -54,10 +56,13 @@ const Footer = () => {
         {/* Contact Us Box */}
         <div className="absolute -top-20 left-1/2 w-full max-w-[755px] -translate-x-1/2 rounded-xl bg-primary p-8 text-center shadow-xl">
           <h3 className="text-2xl font-bold text-white">{contactUs.title}</h3>
-          <p className="text-white">{contactUs.description}</p>
-          <button className="mt-6 rounded-full bg-secondary px-6 py-2 font-bold text-white">
+          <p className="mb-7 text-white">{contactUs.description}</p>
+          <Link
+            href={contactUs.link}
+            className="w-[160px] rounded-full bg-secondary px-6 py-2 text-center font-bold text-white transition hover:bg-secondary/90"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
 
         {/* Social Links and Copyright - Using flex for centering */}

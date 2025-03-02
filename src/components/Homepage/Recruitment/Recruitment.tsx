@@ -1,3 +1,6 @@
+import { ROUTES } from '@/config/route';
+import Link from 'next/link';
+
 const Recruitment = () => {
   const aboutDetails = {
     title: 'Recruitment of Workers & Maids',
@@ -6,15 +9,15 @@ const Recruitment = () => {
     button: [
       {
         label: 'Domestic Worker',
-        href: '',
+        href: ROUTES.DOMESTIC_WORKER,
       },
       {
         label: 'Foreign Worker',
-        href: '',
+        href: ROUTES.FOREIGN_WORKER,
       },
       {
         label: 'Maids',
-        href: '',
+        href: ROUTES.MAIDS,
       },
     ],
   };
@@ -27,14 +30,15 @@ const Recruitment = () => {
         <p className="mt-10 text-center text-xl leading-9 text-white">
           {aboutDetails.descripton}
         </p>
-        <div className="gapx-32 mt-14 flex py-16">
+        <div className="mt-14 flex gap-32">
           {aboutDetails.button.map((item, index) => (
-            <button
+            <Link
               key={index}
-              className="w-[160px] rounded-xl bg-secondary px-6 py-2 font-bold text-white"
+              href={item.href}
+              className="w-[160px] rounded-xl bg-secondary px-6 py-2 text-center font-bold text-white transition hover:bg-secondary/90"
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </div>
       </div>

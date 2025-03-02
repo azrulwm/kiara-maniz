@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import homepageImage from '@public/homepage-image.png';
+import Link from 'next/link';
+import { ROUTES } from '@/config/route';
 
 const Hero = () => {
   const heroDetails = {
@@ -7,6 +9,7 @@ const Hero = () => {
     description: `Your Expert Recruitment
       Service for Domestic &
       Foreign Workers`,
+    link: ROUTES.ABOUT,
   };
 
   return (
@@ -25,12 +28,15 @@ const Hero = () => {
           <h1 className="text-2xl font-bold text-secondary drop-shadow-2xl">
             {heroDetails.title}
           </h1>
-          <h2 className="whitespace-pre-line text-5xl font-extrabold leading-[4rem] text-white drop-shadow-2xl">
+          <h2 className="mb-8 whitespace-pre-line text-5xl font-extrabold leading-[4rem] text-white drop-shadow-2xl">
             {heroDetails.description}
           </h2>
-          <button className="mt-6 rounded-2xl bg-secondary px-6 py-2 font-bold text-white">
+          <Link
+            href={heroDetails.link}
+            className="rounded-2xl bg-secondary px-10 py-4 font-bold text-white transition hover:bg-secondary/90"
+          >
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
     </div>

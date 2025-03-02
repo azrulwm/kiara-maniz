@@ -1,3 +1,6 @@
+import { ROUTES } from '@/config/route';
+import Link from 'next/link';
+
 const Consultancy = () => {
   const aboutDetails = {
     title: 'Human Resource Consultancy',
@@ -6,7 +9,7 @@ const Consultancy = () => {
     button: [
       {
         label: 'List of Services',
-        href: '',
+        href: ROUTES.HR_CONSULTANCY,
       },
     ],
   };
@@ -19,14 +22,15 @@ const Consultancy = () => {
         <p className="mt-10 text-center text-xl leading-9">
           {aboutDetails.descripton}
         </p>
-        <div className="gapx-32 mt-14 flex py-16">
+        <div className="flex py-16">
           {aboutDetails.button.map((item, index) => (
-            <button
+            <Link
               key={index}
-              className="w-[160px] rounded-xl bg-secondary px-6 py-2 font-bold text-white"
+              href={item.href}
+              className="w-[160px] rounded-xl bg-secondary px-6 py-2 text-center font-bold text-white"
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </div>
       </div>
