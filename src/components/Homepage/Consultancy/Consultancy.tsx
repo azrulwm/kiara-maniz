@@ -15,19 +15,19 @@ const Consultancy = () => {
   };
   return (
     <div className="consultancy-homepage">
-      <div className="container flex flex-col items-center justify-center px-32 py-16">
-        <h1 className="mt-2 text-3xl font-extrabold text-secondary">
+      <div className="container flex flex-col items-center justify-center px-4 py-8 md:px-32 md:py-16">
+        <h1 className="mt-2 text-center text-2xl font-extrabold text-secondary md:text-3xl">
           {aboutDetails.title}
         </h1>
-        <p className="mt-10 text-center text-xl leading-9">
+        <p className="mt-6 text-justify text-lg leading-7 md:mt-10 md:text-center md:text-xl md:leading-9">
           {aboutDetails.descripton}
         </p>
-        <div className="flex py-16">
+        <div className="py-8 md:py-16">
           {aboutDetails.button.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="w-[160px] rounded-xl bg-secondary px-6 py-2 text-center font-bold text-white"
+              className="flex h-[40px] w-[160px] items-center justify-center rounded-xl bg-secondary font-bold text-white transition hover:bg-secondary/90 md:h-[60px]"
             >
               {item.label}
             </Link>

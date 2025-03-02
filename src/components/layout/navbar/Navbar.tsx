@@ -28,7 +28,7 @@ const Navbar = () => {
                 width={120}
                 height={40}
                 priority
-                className="object-contain"
+                className="w-[100px] object-contain md:w-[120px]"
               />
             </Link>
           </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+              className="inline-flex items-center justify-center rounded-md p-2 text-secondary hover:bg-secondary/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -93,12 +93,12 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+          <div className="space-y-1 px-2 pb-3 pt-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 transition-colors duration-200 hover:bg-gray-50 hover:text-gray-900"
+                className="block rounded-md px-3 py-2 text-center text-base font-medium text-secondary transition-colors duration-200 hover:bg-secondary/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
