@@ -16,23 +16,23 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-page">
-      <div className="container flex flex-col items-center justify-center gap-6 px-32 py-16">
-        <h1 className="mt-2 text-center text-3xl font-extrabold text-secondary">
+      <div className="container flex flex-col items-center justify-center gap-6 px-32 py-16 max-md:px-4 max-md:py-8">
+        <h1 className="mt-2 text-center text-3xl font-extrabold text-secondary max-md:text-2xl">
           {contactDetails.header}
         </h1>
-        <div className="max-w-[840px]">
-          <h2 className="mb-4 text-center text-2xl font-bold text-primary">
+        <div className="max-w-[840px] max-md:w-full">
+          <h2 className="mb-4 text-center text-2xl font-bold text-primary max-md:text-xl">
             {contactDetails.mainParagraph.title}
           </h2>
-          <p className="mb-10 text-center text-xl leading-8">
+          <p className="mb-10 text-center text-xl leading-8 max-md:mb-6 max-md:text-base max-md:leading-7">
             {contactDetails.mainParagraph.description}
           </p>
         </div>
 
-        <div className="grid w-full max-w-[840px] grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="grid w-full max-w-[840px] grid-cols-1 gap-10 max-md:gap-6 md:grid-cols-2">
           {/* Contact Form */}
-          <div className="rounded-lg bg-white p-6 shadow-md">
-            <h3 className="mb-6 text-xl font-bold text-secondary">
+          <div className="rounded-lg bg-white p-6 shadow-md max-md:p-4">
+            <h3 className="mb-6 text-xl font-bold text-secondary max-md:mb-4 max-md:text-lg">
               Send us a message
             </h3>
             <form className="space-y-4">
@@ -72,32 +72,32 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="rounded-lg bg-white p-6 shadow-md">
-            <h3 className="mb-6 text-xl font-bold text-secondary">
+          <div className="rounded-lg bg-white p-6 shadow-md max-md:p-4">
+            <h3 className="mb-6 text-xl font-bold text-secondary max-md:mb-4 max-md:text-lg">
               Contact Information
             </h3>
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium">Address</h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 max-md:text-sm">
                   {contactDetails.contactInfo.address}
                 </p>
               </div>
               <div>
                 <h4 className="font-medium">Email</h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 max-md:text-sm">
                   {contactDetails.contactInfo.email}
                 </p>
               </div>
               <div>
                 <h4 className="font-medium">Phone</h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 max-md:text-sm">
                   {contactDetails.contactInfo.phone}
                 </p>
               </div>
               <div>
                 <h4 className="font-medium">Business Hours</h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 max-md:text-sm">
                   {contactDetails.contactInfo.hours}
                 </p>
               </div>
