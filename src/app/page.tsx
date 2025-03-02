@@ -3,7 +3,7 @@ import Consultancy from '@/components/Homepage/Consultancy';
 import Hero from '@/components/Homepage/Hero';
 import Recruitment from '@/components/Homepage/Recruitment';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="homepage">
       <Hero />
