@@ -53,16 +53,16 @@ const Faq = () => {
         </h1>
         <div className="mx-auto max-w-[840px] space-y-4">
           {faqDetails.questions.map((faq, index) => (
-            <div key={index} className="rounded-sm border-2 border-secondary">
+            <div key={index} className="rounded-xl border-2 border-secondary">
               <button
-                className="flex w-full items-center justify-between rounded-lg bg-white px-6 py-8"
+                className="flex w-full items-center justify-between px-6 py-8"
                 onClick={() => toggleAccordion(index)}
               >
                 <span className="text-left text-lg font-medium">
                   {faq.question}
                 </span>
                 <span
-                  className={`transform text-2xl text-secondary transition-transform duration-200 ${
+                  className={`transform text-2xl text-secondary transition-transform duration-500 ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                 >
