@@ -24,7 +24,7 @@ const ForeignWorker = () => {
 
   return (
     <div className="foreign-worker-foreignworkerpage">
-      <div className="container flex flex-col items-center justify-center gap-6 p-32">
+      <div className="container flex flex-col items-center justify-center gap-6 px-32 py-16">
         <div className="flex gap-8">
           <div className="w-1/3">
             <Image

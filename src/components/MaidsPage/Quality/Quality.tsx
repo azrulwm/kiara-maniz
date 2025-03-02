@@ -35,7 +35,7 @@ const quality = () => {
   };
   return (
     <div className="quality-maidspage">
-      <div className="container flex items-center justify-center gap-10 p-32">
+      <div className="container flex items-center justify-center gap-10 px-32 py-16">
         <div className="w-1/2">
           <Image
             src={qualityImage}

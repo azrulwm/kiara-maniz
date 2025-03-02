@@ -60,7 +60,7 @@ const OurServices = () => {
   };
   return (
     <div className="our-services-foreignworkerpage bg-gray-100">
-      <div className="container flex flex-col items-center justify-center p-32">
+      <div className="container flex flex-col items-center justify-center px-32 py-16">
         <h1 className="mb-10 text-center text-3xl font-extrabold text-secondary">
           {serviceDetails.header}
         </h1>

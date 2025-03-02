@@ -12,14 +12,14 @@ const Consultancy = () => {
   };
   return (
     <div className="consultancy-homepage">
-      <div className="container flex flex-col items-center justify-center p-32">
+      <div className="container flex flex-col items-center justify-center px-32 py-16">
         <h1 className="mt-2 text-3xl font-extrabold text-secondary">
           {aboutDetails.title}
         </h1>
         <p className="mt-10 text-center text-xl leading-9">
           {aboutDetails.descripton}
         </p>
-        <div className="mt-14 flex gap-32">
+        <div className="gapx-32 mt-14 flex py-16">
           {aboutDetails.button.map((item, index) => (
             <button
               key={index}

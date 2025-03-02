@@ -38,7 +38,7 @@ const Steps = () => {
   };
   return (
     <div className="steps-maidspage">
-      <div className="container flex flex-col items-center justify-center p-32">
+      <div className="container flex flex-col items-center justify-center px-32 py-16">
         <h1 className="text-center text-3xl font-extrabold text-secondary">
           {stepDetails.header}
         </h1>

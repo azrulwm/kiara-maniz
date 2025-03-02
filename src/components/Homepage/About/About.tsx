@@ -11,7 +11,7 @@ const About = () => {
   };
   return (
     <div className="about-homepage">
-      <div className="container flex flex-col items-center justify-center p-32">
+      <div className="container flex flex-col items-center justify-center px-32 py-16">
         <Image
           src={kiaraManizLogo}
           alt="Brand Logo"

@@ -18,7 +18,7 @@ const HousemaidServices = () => {
   ];
   return (
     <div className="housemaid-services-maidspage bg-gray-100">
-      <div className="container p-32">
+      <div className="container px-32 py-16">
         {housemaidServicesDetails.map((item, index) => (
           <div key={index} className="mb-10 w-1/2">
             <h1 className="text-3xl font-extrabold text-secondary">

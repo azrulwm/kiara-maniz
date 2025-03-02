@@ -13,7 +13,7 @@ const AboutUs = () => {
   ];
   return (
     <div className="about-us-aboutpage bg-gray-100">
-      <div className="container flex flex-col items-center justify-center gap-20 p-32">
+      <div className="container flex flex-col items-center justify-center gap-20 px-32 py-16">
         {aboutDetails.map((item, index) => (
           <div key={index}>
             <h1 className="mt-2 text-center text-3xl font-extrabold text-secondary">
