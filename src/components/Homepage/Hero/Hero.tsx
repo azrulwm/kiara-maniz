@@ -20,12 +20,12 @@ const Hero = () => {
         priority
         width={2000}
         height={845}
-        className="object-cover"
+        className="h-[500px] w-full object-cover md:h-auto"
       />
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="max-w-[840px] px-4 md:px-0">
-          <h1 className="text-lg font-bold text-secondary drop-shadow-2xl sm:text-2xl">
+          <h1 className="text-2xl font-bold text-secondary drop-shadow-2xl">
             {heroDetails.title}
           </h1>
           <h2 className="mb-6 whitespace-pre-line text-2xl font-extrabold text-white drop-shadow-2xl sm:mb-8 sm:text-5xl sm:leading-[4rem]">
@@ -33,7 +33,7 @@ const Hero = () => {
           </h2>
           <Link
             href={heroDetails.link}
-            className="inline-block rounded-2xl bg-secondary px-3 py-1 text-sm font-bold text-white transition hover:bg-secondary/90 md:px-10 md:py-4 md:text-base"
+            className="text-md inline-block rounded-2xl bg-secondary px-5 py-3 font-bold text-white transition hover:bg-secondary/90 md:px-10 md:py-4 md:text-xl"
           >
             Learn More
           </Link>
