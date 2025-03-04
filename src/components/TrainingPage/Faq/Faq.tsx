@@ -7,8 +7,7 @@ const Faq = () => {
     header: 'Frequently Asked Questions',
     questions: [
       {
-        question:
-          'What is the main focus of Kiara Maniz’s Training and Development service?',
+        question: `What is the main focus of Kiara Maniz's Training and Development service?`,
         answer:
           'Our Training and Development service is centered around investing in your workforce. We design and deliver tailored training programs that aim to enhance skills, boost productivity, and contribute to long-term employee satisfaction.',
       },
@@ -21,8 +20,7 @@ const Faq = () => {
       {
         question:
           'What types of skills and competencies can be addressed through your training programs?',
-        answer:
-          'Our training programs cover a wide range of skills and competencies, including technical skills, leadership development, communication skills, problem-solving, and industry-specific expertise. Whether it’s enhancing existing skills or developing new ones, we create programs that align with the evolving needs of your workforce and industry.',
+        answer: `Our training programs cover a wide range of skills and competencies, including technical skills, leadership development, communication skills, problem-solving, and industry-specific expertise. Whether it's enhancing existing skills or developing new ones, we create programs that align with the evolving needs of your workforce and industry.`,
       },
       {
         question:
@@ -47,22 +45,22 @@ const Faq = () => {
 
   return (
     <div className="faq-section">
-      <div className="container mx-auto px-32 py-16">
-        <h1 className="mb-10 text-center text-3xl font-extrabold text-secondary">
+      <div className="container mx-auto px-4 py-8 md:px-32 md:py-16">
+        <h1 className="mb-6 text-center text-2xl font-extrabold text-secondary md:mb-10 md:text-3xl">
           {faqDetails.header}
         </h1>
-        <div className="mx-auto max-w-[840px] space-y-4">
+        <div className="mx-auto max-w-[840px] space-y-3 md:space-y-4">
           {faqDetails.questions.map((faq, index) => (
             <div key={index} className="rounded-xl border-2 border-secondary">
               <button
-                className="flex w-full items-center justify-between px-6 py-8"
+                className="flex w-full items-center justify-between px-4 py-4 md:px-6 md:py-8"
                 onClick={() => toggleAccordion(index)}
               >
-                <span className="text-left text-lg font-medium">
+                <span className="text-left text-base font-medium md:text-lg">
                   {faq.question}
                 </span>
                 <span
-                  className={`transform text-2xl text-secondary transition-transform duration-500 ${
+                  className={`ml-2 transform text-xl text-secondary transition-transform duration-500 md:text-2xl ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                 >
@@ -70,7 +68,9 @@ const Faq = () => {
                 </span>
               </button>
               {activeIndex === index && (
-                <div className="px-6 pb-4 pt-2 text-gray-600">{faq.answer}</div>
+                <div className="px-4 pb-4 pt-2 text-sm text-gray-600 md:px-6 md:text-base">
+                  {faq.answer}
+                </div>
               )}
             </div>
           ))}
