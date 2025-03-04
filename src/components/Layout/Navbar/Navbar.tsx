@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-primary">
+    <nav className="navigation-bar">
       <div className="container">
         <div className="flex h-16 justify-between">
           <div className="flex items-center">

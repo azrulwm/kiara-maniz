@@ -48,21 +48,22 @@ const Footer = () => {
         alt="Footer Background"
         width={1440}
         height={372}
-        className="w-full object-cover"
+        className="h-[120px] object-cover md:h-[370px]"
       />
 
       {/* Social Logos and Copyright Section */}
       <div className="relative flex h-[500px] flex-col bg-primary">
         {/* Contact Us Box */}
-        <div className="absolute -top-20 left-1/2 w-full max-w-[755px] -translate-x-1/2 rounded-xl bg-primary p-8 text-center shadow-xl">
-          <h3 className="text-2xl font-bold text-white">{contactUs.title}</h3>
-          <p className="mb-7 text-white">{contactUs.description}</p>
-          <Link
-            href={contactUs.link}
-            className="w-[160px] rounded-full bg-secondary px-6 py-2 text-center font-bold text-white transition hover:bg-secondary/90"
-          >
-            Contact Us
-          </Link>
+        <div className="absolute -top-10 left-1/2 w-full max-w-[300px] -translate-x-1/2 rounded-xl bg-primary p-2 text-center shadow-xl md:-top-20 md:max-w-[755px] md:p-8">
+          <h3 className="text-[18px] font-bold text-white md:text-2xl">
+            {contactUs.title}
+          </h3>
+          <p className="mb-2 text-[14px] text-white md:mb-7 md:text-lg">
+            {contactUs.description}
+          </p>
+          <div className="mx-auto mb-2 w-[160px] rounded-full bg-secondary px-6 py-2 text-center text-sm font-bold text-white transition hover:bg-secondary/90 md:text-xl">
+            <Link href={contactUs.link}>Contact Us</Link>
+          </div>
         </div>
 
         {/* Social Links and Copyright - Using flex for centering */}
