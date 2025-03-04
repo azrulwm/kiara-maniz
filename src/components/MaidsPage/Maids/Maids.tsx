@@ -36,7 +36,7 @@ const Maids = () => {
           </div>
 
           {/* Content Section */}
-          <div className="w-2/3 max-md:mt-8 max-md:w-full max-md:px-4">
+          <div className="mb-6 w-2/3 max-md:mt-8 max-md:w-full max-md:px-4">
             {/* Desktop Header */}
             <h1 className="mt-2 text-3xl font-extrabold text-secondary max-md:hidden">
               {maidsDetails.header}
