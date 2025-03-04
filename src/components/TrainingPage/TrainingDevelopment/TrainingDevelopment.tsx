@@ -10,6 +10,11 @@ const TrainingDevelopment = () => {
   return (
     <div className="training-trainingpage">
       <div className="container flex flex-col items-center justify-center gap-4 p-0 md:gap-10 md:px-32 md:py-16">
+        {/* Desktop Header - hidden on mobile */}
+        <h1 className="hidden text-center text-2xl font-extrabold text-secondary md:block md:text-3xl">
+          {trainingDetails.header}
+        </h1>
+
         {/* Header section with background image */}
         <div className="relative w-full">
           <div className="relative h-[300px] w-full md:h-[400px]">
@@ -21,10 +26,10 @@ const TrainingDevelopment = () => {
               className="object-cover"
             />
             {/* Overlay to ensure text readability */}
-            <div className="absolute inset-0 bg-black/40" />
-            {/* Centered header text */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h1 className="z-10 text-center text-2xl font-extrabold text-secondary md:text-3xl">
+            <div className="absolute inset-0 bg-black/40 md:bg-black/20" />
+            {/* Mobile Header - hidden on desktop */}
+            <div className="absolute inset-0 flex items-center justify-center md:hidden">
+              <h1 className="z-10 text-center text-2xl font-extrabold text-secondary">
                 {trainingDetails.header}
               </h1>
             </div>

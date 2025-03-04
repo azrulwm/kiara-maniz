@@ -48,7 +48,7 @@ const Footer = () => {
         alt="Footer Background"
         width={1440}
         height={372}
-        className="h-[120px] object-cover md:h-[370px]"
+        className="h-[120px] w-full object-cover md:h-auto"
       />
 
       {/* Social Logos and Copyright Section */}
