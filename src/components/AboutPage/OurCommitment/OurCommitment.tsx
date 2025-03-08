@@ -52,10 +52,10 @@ const OurCommitment = () => {
               <Image
                 src={item.logo}
                 alt={`${item.title} Logo`}
-                width={250}
-                height={250}
+                width={110}
+                height={110}
                 priority
-                className="mb-3 h-auto w-[150px] object-contain md:mb-4 md:w-[250px]"
+                className="mb-3 h-auto w-[110px] object-contain md:mb-4"
               />
               <p className="text-center text-sm text-white md:text-base">
                 {item.descripton}

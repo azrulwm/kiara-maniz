@@ -25,7 +25,7 @@ const ContactUs = () => {
         },
       ],
       email: 'sales.kiaramaniz@gmail.com',
-      phone: '018-7887739',
+      phone: '017-7787739',
       hours: 'Monday - Friday: 9:00 AM - 6:00 PM',
     },
   };

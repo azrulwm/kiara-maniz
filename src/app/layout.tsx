@@ -15,8 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '',
-  description: '',
+  title: 'Kiara Maniz',
+  description: 'Your Expert Recruitment Service for Domestic & Foreign Workers',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

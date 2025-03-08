@@ -16,15 +16,15 @@ const Footer = () => {
 
   const socialLogos = [
     {
-      href: 'https://www.facebook.com',
+      href: 'https://www.facebook.com/Agensi.Pekerjaan.Kiara.Maniz',
       logo: facebookIcon,
     },
     {
-      href: 'https://www.tiktok.com',
+      href: 'https://www.tiktok.com/@kiaramaniz?_t=ZS-8uQE8uYhBju&_r=1',
       logo: tiktokIcon,
     },
     {
-      href: 'https://www.instagram.com',
+      href: 'https://www.instagram.com/kiaramaniz?igsh=MXV1NXZob3NsODRsaA==',
       logo: instagramIcon,
     },
   ];
