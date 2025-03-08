@@ -26,133 +26,124 @@ const ContactUs = () => {
       ],
       email: 'sales.kiaramaniz@gmail.com',
       phone: '017-7787739',
+      whatsapp: '60177787739',
       hours: 'Monday - Friday: 9:00 AM - 6:00 PM',
     },
   };
 
   return (
-    <div className="contact-us-page">
-      <div className="container flex flex-col items-center justify-center gap-6 px-32 py-16 max-md:px-4 max-md:py-8">
-        <h1 className="mt-2 text-center text-3xl font-extrabold text-secondary max-md:text-2xl">
+    <div className="contact-us-page bg-gray-50">
+      <div className="container mx-auto px-4 py-16 md:px-32">
+        <h1 className="mb-4 text-center text-3xl font-extrabold text-secondary max-md:text-2xl">
           {contactDetails.header}
         </h1>
-        <div className="max-w-[840px] max-md:w-full">
+        <div className="mx-auto max-w-[840px]">
           <h2 className="mb-4 text-center text-2xl font-bold text-primary max-md:text-xl">
             {contactDetails.mainParagraph.title}
           </h2>
-          <p className="mb-10 text-center text-xl leading-8 max-md:mb-6 max-md:text-base max-md:leading-7">
+          <p className="mb-12 text-center text-xl leading-8 max-md:mb-8 max-md:text-base max-md:leading-7">
             {contactDetails.mainParagraph.description}
           </p>
-        </div>
 
-        <div className="grid w-full max-w-[840px] grid-cols-1 gap-10 max-md:gap-6 md:grid-cols-2">
-          {/* Contact Form */}
-          <div className="rounded-lg bg-white p-6 shadow-md max-md:p-4">
-            <h3 className="mb-6 text-xl font-bold text-secondary max-md:mb-4 max-md:text-lg">
-              Send us a message
-            </h3>
-            <form className="space-y-4">
-              <div>
-                <label className="mb-2 block text-sm font-medium">Name</label>
-                <input
-                  type="text"
-                  className="w-full rounded-md border border-gray-300 p-2"
-                  placeholder="Your name"
-                />
+          {/* Contact Methods */}
+          <div className="mb-12 grid gap-6 md:grid-cols-3">
+            {/* Phone */}
+            <a
+              href={`tel:${contactDetails.contactInfo.phone}`}
+              className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="mb-3 rounded-full bg-secondary/10 p-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-8 w-8 text-secondary"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium">Email</label>
-                <input
-                  type="email"
-                  className="w-full rounded-md border border-gray-300 p-2"
-                  placeholder="your@email.com"
-                />
+              <h3 className="mb-2 font-bold text-gray-900">Call Us</h3>
+              <p className="text-secondary">
+                {contactDetails.contactInfo.phone}
+              </p>
+            </a>
+
+            {/* WhatsApp */}
+            <a
+              href={`https://wa.me/${
+                contactDetails.contactInfo.whatsapp
+              }?text=${encodeURIComponent(
+                'Hi, I would like to inquire about your services.'
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="mb-3 rounded-full bg-secondary/10 p-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  fill="currentColor"
+                  className="h-8 w-8 text-secondary"
+                >
+                  <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg>
               </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium">
-                  Message
-                </label>
-                <textarea
-                  className="w-full rounded-md border border-gray-300 p-2"
-                  rows={4}
-                  placeholder="Your message"
-                ></textarea>
+              <h3 className="mb-2 font-bold text-gray-900">WhatsApp</h3>
+              <p className="text-secondary">Chat with us</p>
+            </a>
+
+            {/* Email */}
+            <a
+              href={`mailto:${contactDetails.contactInfo.email}`}
+              className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="mb-3 rounded-full bg-secondary/10 p-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-8 w-8 text-secondary"
+                >
+                  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
               </div>
-              <button
-                type="submit"
-                className="w-full rounded-md bg-secondary px-4 py-2 text-white hover:bg-secondary/90"
-              >
-                Send Message
-              </button>
-            </form>
+              <h3 className="mb-2 font-bold text-gray-900">Email</h3>
+              <p className="text-secondary">
+                {contactDetails.contactInfo.email}
+              </p>
+            </a>
           </div>
 
-          {/* Contact Information */}
-          <div className="rounded-lg bg-white p-6 shadow-md max-md:p-4">
-            <h3 className="mb-6 text-xl font-bold text-secondary max-md:mb-4 max-md:text-lg">
-              Contact Information
+          {/* Locations */}
+          <div className="rounded-xl bg-white p-8 shadow-md">
+            <h3 className="mb-6 text-xl font-bold text-secondary">
+              Our Locations
             </h3>
-            <div className="space-y-6">
-              {/* Locations */}
-              <div className="space-y-4">
-                <h4 className="font-medium">Our Locations</h4>
-                {contactDetails.contactInfo.locations.map((location, index) => (
-                  <div key={index} className="border-l-2 border-secondary pl-3">
-                    <p className="font-medium text-secondary">
-                      {location.city}
-                    </p>
-                    <p className="text-gray-600 max-md:text-sm">
-                      {location.address}
-                    </p>
-                  </div>
-                ))}
-              </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {contactDetails.contactInfo.locations.map((location, index) => (
+                <div key={index} className="border-l-2 border-secondary pl-4">
+                  <p className="mb-2 font-medium text-secondary">
+                    {location.city}
+                  </p>
+                  <p className="text-sm text-gray-600">{location.address}</p>
+                </div>
+              ))}
+            </div>
 
-              <div>
-                <h4 className="font-medium">Email</h4>
-                <a
-                  href={`mailto:${contactDetails.contactInfo.email}`}
-                  className="inline-flex items-center gap-2 text-secondary underline transition-colors duration-200 hover:text-secondary/80 max-md:text-sm"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="h-5 w-5"
-                  >
-                    <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-                    <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-                  </svg>
-                  {contactDetails.contactInfo.email}
-                </a>
-              </div>
-              <div>
-                <h4 className="font-medium">Phone</h4>
-                <a
-                  href={`tel:${contactDetails.contactInfo.phone}`}
-                  className="inline-flex items-center gap-2 text-secondary underline transition-colors duration-200 hover:text-secondary/80 max-md:text-sm"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="h-5 w-5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  {contactDetails.contactInfo.phone}
-                </a>
-              </div>
-              <div>
-                <h4 className="font-medium">Business Hours</h4>
-                <p className="text-gray-600 max-md:text-sm">
-                  {contactDetails.contactInfo.hours}
-                </p>
-              </div>
+            {/* Business Hours */}
+            <div className="mt-8 border-t pt-6">
+              <h4 className="mb-2 font-medium text-secondary">
+                Business Hours
+              </h4>
+              <p className="text-sm text-gray-600">
+                {contactDetails.contactInfo.hours}
+              </p>
             </div>
           </div>
         </div>
