@@ -16,7 +16,7 @@ const Footer = () => {
 
   const socialLogos = [
     {
-      href: 'https://www.facebook.com/Agensi.Pekerjaan.Kiara.Maniz',
+      href: 'https://www.facebook.com/kiaramaniz.my/',
       logo: facebookIcon,
     },
     {
